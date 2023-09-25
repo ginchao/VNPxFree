@@ -445,12 +445,6 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
   end  
   end  
   end)  
-  for i, v in pairs(game:GetDescendants()) do  
-  if v:IsA("RemoteEvent") and v.Name == "Fire" then  
-  v:FireServer()  
-  end  
-  end  
-  end) 
  local drops = serv:Channel("Player2") 
  drops:Label("Fast Acttack No Equip No Choose, _Fastattack") 
  drops:Toggle("Fast Acttack ",false, function(e) 
