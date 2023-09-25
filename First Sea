@@ -1,8 +1,8 @@
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
-  local win = DiscordLib:Window("Test Hub")  
+  local win = DiscordLib:Window("Test Hub X Free")  
   local per = game.Players.LocalPlayer.Name
  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub, Have Fun:)","Ok")  
-  local serv = win:Server("VietNamPiece Pvp 1", "") 
+  local serv = win:Server("VNP1 X Free", "") 
  local tgls = serv:Channel("Stats and Load Map") 
  tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
