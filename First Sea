@@ -242,64 +242,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  end 
  end) 
  end) 
-  local drops = serv:Channel("Weapon")  
-  local Weaponlist = {}  
-  local Weapon = nil  
-  for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
-  if v:IsA("Tool") then  
-          table.insert(Weaponlist,v.Name)  
-  end  
-  end  
-  local drop = drops:Dropdown("Pick", Weaponlist, function(m)  
-  for i, k in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
-  if m == k.Name then  
-          Weapon = m  
-  if Weapon then  
-  game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))  
-  end  
-  end  
-  end  
-  end)  
-  drops:Button("Refresh Weapon", function()  
-  drop:Clear()  
-  for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
-  if v:IsA("Tool") then  
-  drop:Add(v.Name)  
-  end  
-  end  
-  end)  
-  drops:Toggle("Auto Equip",false, function(a) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to AutoEquip", "Ok") 
- elseif Weapon ~= nil then 
-          AutoEquiped = a  
- end 
-  end)  
-  spawn(function()  
-          while wait() do  
-                  if AutoEquiped then  
-                          pcall(function()  
-                                  game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))  
-                          end)  
-                  end  
-          end  
-  end)  
- drops:Toggle("Choose Weapon To Fast Actack",false, function(v) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack", "Ok") 
- elseif Weapon ~= nil then 
-  getgenv().ie = v  
-  spawn(function()  
-  while ie == true do  
-  pcall(function()  
-  while ie do wait()  game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end  
-  end)  
-  end  
-  end) 
- end 
-  end)  
+  
  drops:Toggle("Grabtools",false, function(I) 
  getgenv().autograb = I 
  spawn(function() 
