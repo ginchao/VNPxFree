@@ -529,7 +529,7 @@ end
  drops:Button("Change To 100", function() 
  drop:Change("100") 
  end) 
-  drops:Toggle("Hitbox All Player",false, function() 
+  drops:Button("Hitbox All Player", function() 
  _G.HeadSize = 2500 
  _G.Disabled = true
  local function hit() 
