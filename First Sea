@@ -479,9 +479,6 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  end) 
 
  local drop = drops:Slider("Player Hitbox", 0, 2500, 0, function(t)   
-   if plr == nil then   
-   DiscordLib:Notification("Warning", "Choose Player to Hitbox Player", "Ok")   
-   elseif plr ~= nil then   
  _G.HeadSize = t 
  _G.Disabled = true 
  local function clip() 
@@ -498,7 +495,6 @@ end
  end  
 end
 game:GetService('RunService').RenderStepped:connect(clip) 
-end
  end) 
   local Noclipping = nil  
   drops:Toggle("Noclip",false, function(v)  
