@@ -479,8 +479,11 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  end) 
 
  local drop = drops:Slider("Player Hitbox", 0, 2500, 0, function(t)   
+   if plr == nil then   
+   DiscordLib:Notification("Warning", "Choose Player to Hitbox Player", "Ok")   
+   elseif plr ~= nil then   
  _G.HeadSize = t 
- _G.Disabled = true 
+ _G.Disabled = t
  local function clip() 
  if _G.Disabled then 
  for i,v in pairs(game:GetService('Players'):GetPlayers()) do 
@@ -495,6 +498,7 @@ end
  end  
 end
 game:GetService('RunService').RenderStepped:connect(clip) 
+end
  end) 
   local Noclipping = nil  
   drops:Toggle("Noclip",false, function(v)  
@@ -525,9 +529,9 @@ game:GetService('RunService').RenderStepped:connect(clip)
  drops:Button("Change To 100", function() 
  drop:Change("100") 
  end) 
-  drops:Toggle("Hitbox All Player",false, function(v) 
+  drops:Toggle("Hitbox All Player",false, function() 
  _G.HeadSize = 2500 
- _G.Disabled = v 
+ _G.Disabled = true
  local function hit() 
  if _G.Disabled then 
  for i,v in next, game:GetService('Players'):GetPlayers() do 
@@ -539,10 +543,8 @@ game:GetService('RunService').RenderStepped:connect(clip)
  end) 
  end 
  end 
- else drop:Change("1") 
  end 
- end 
- game:GetService('RunService').RenderStepped:connect(hit) 
+ end  game:GetService('RunService').RenderStepped:connect(hit) 
  end)
    local sldrs = serv:Channel("Walk Speed")    
    sldrs:Button("Clear", function(v)    
