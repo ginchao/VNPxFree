@@ -385,29 +385,26 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Auto Teleport Player", "Ok") 
  elseif plr ~= nil then 
-  getgenv().autotele = t  
-  spawn(function()  
-  while autotele do wait()  
-  pcall(function()  
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait()  
+   local v2 = nil
+getgenv().autele = t
+if v2 then a:Disconnect() end
+if autele ~= v2 then
+v2 = game.RunService.RenderStepped:Connect(function()
+if autele == false then v2:Disconnect() end game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait()  
   end)  
   end  
-  end)  
- end 
+  end
   end)  
   drops:Toggle("Auto Bring Player, Need LoadMap",false, function(a)  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Bring Player", "Ok") 
  elseif plr ~= nil then 
- for _ = 1,10 do wait() 
-  getgenv().AutoBr = a  
-  spawn(function()  
-  while AutoBr do wait()  
-  pcall(function()  
-  
-  game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait()  
-  end)  
-  end  
+  local v2 = nil
+getgenv().bri = a
+if v2 then a:Disconnect() end
+if bri ~= v2 then
+v2 = game.RunService.RenderStepped:Connect(function()
+if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait()  
   end)  
  end 
  end 
@@ -431,18 +428,17 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  end 
   end)  
   drops:Toggle("Auto Bring All Player, Need LoadMap",false, function(t)  
- for _ = 1,10 do wait() 
-  getgenv().autobring1 = t 
- spawn(function() 
- while getgenv().autobring1 do wait() 
- spawn(function() 
+  local v2 = nil
+getgenv().brin = t
+if v2 then a:Disconnect() end
+if brin ~= v2 then
+v2 = game.RunService.RenderStepped:Connect(function()
+if brin == false then v2:Disconnect() end
  for i, v in pairs(game.Players:GetChildren()) do 
  local ok = game.Players.LocalPlayer.Name 
  if v.Name ~=  ok  then  
  v.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -7) wait() 
  end 
- end 
- end) 
  end 
  end) 
  end 
