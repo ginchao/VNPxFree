@@ -40,7 +40,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  end 
  end) 
  end)
-tgls:Label("Auto Skill")
+tgls:Seperator()
 tgls:Toggle("Auto Z",false, function(z)
 getgenv().autoskill = z
 while autoskill do wait()
