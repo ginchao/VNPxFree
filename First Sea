@@ -3,7 +3,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
   local per = game.Players.LocalPlayer.Name
  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub, Have Fun:)","Ok")  
   local serv = win:Server("VNP1 X Free", "") 
- local tgls = serv:Channel("Stats and Load Map") 
+ local tgls = serv:Channel("Stats, Auto Skill and Load Map") 
  tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
  spawn(function() 
@@ -39,7 +39,105 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  wait() 
  end 
  end) 
- end) 
+ end)
+tgls:Label("Auto Skill")
+tgls:Toggle("Auto Z",false, function(z)
+getgenv().autoskill = z
+while autoskill do wait()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Z") then
+for i,c in pairs(v.Z:GetChildren()) do
+if c:IsA("RemoteEvent") then
+c:FireServer()
+end
+end
+end
+end
+end)
+end
+end)
+tgls:Toggle("Auto X",false, function(z)
+getgenv().autoskillx = z
+while autoskillx do wait()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Z") then
+for i,c in pairs(v.X:GetChildren()) do
+if c:IsA("RemoteEvent") then
+c:FireServer()
+end
+end
+end
+end
+end)
+end
+end)
+tgls:Toggle("Auto C",false, function(z)
+getgenv().autoskillc = z
+while autoskillc do wait()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Z") then
+for i,c in pairs(v.C:GetChildren()) do
+if c:IsA("RemoteEvent") then
+c:FireServer()
+end
+end
+end
+end
+end)
+end
+end)
+tgls:Toggle("Auto V",false, function(z)
+getgenv().autoskillv = z
+while autoskillv do wait()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Z") then
+for i,c in pairs(v.V:GetChildren()) do
+if c:IsA("RemoteEvent") then
+c:FireServer()
+end
+end
+end
+end
+end)
+end
+end)
+tgls:Toggle("Auto F",false, function(z)
+getgenv().autoskillf = z
+while autoskillf do wait()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Z") then
+for i,c in pairs(v.F:GetChildren()) do
+if c:IsA("RemoteEvent") then
+c:FireServer()
+end
+end
+end
+end
+end)
+end
+end)
+tgls:Toggle("Auto N",false, function(z)
+getgenv().autoskilln = z
+while autoskilln do wait()
+pcall(function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") and v:FindFirstChild("Z") then
+for i,c in pairs(v.N:GetChildren()) do
+if c:IsA("RemoteEvent") then
+c:FireServer()
+end
+end
+end
+end
+end)
+end
+end)
+     
  tgls:Button("LoadMap", function() 
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(374.444855, 260.0784, -1132.96313, -0.986770988, -0, -0.162120432, -0, 1, -0, 0.162120432, 0, -0.986770988)*CFrame.new(0, 27, 0) 
  wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-972.539612, 171.965164, 375.375153, -0.352832913, -2.21926921e-08, 0.93568635, -3.1479086e-08, 1, 1.18478098e-08, -0.93568635, -2.5274252e-08, -0.352832913)*CFrame.new(0, 27, 0) 
