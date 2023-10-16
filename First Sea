@@ -1,5 +1,5 @@
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
-  local win = DiscordLib:Window("Test Hub X Free")  
+  local win = DiscordLib:Window("Test Hub X Free Nó  Premium")  
   local per = game.Players.LocalPlayer.Name
  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub, Have Fun:)","Ok")  
   local serv = win:Server("VNP1 X Free", "") 
