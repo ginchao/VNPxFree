@@ -253,37 +253,37 @@ end)
   if quest == "Bandit" then   
   for i, v in pairs(fiv:GetChildren()) do   
   if v.Name == "Bandit" then   
-  v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)   
+  v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)   
   end  
   end  
   elseif quest == "Snow Bandit" then   
   for i, e in pairs(fiv:GetChildren()) do  
   if e.Name == "SnowBandit" then  
-  e.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  e.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   end  
   end  
   elseif quest == "Sky Bandit" then  
   for i, b in pairs(fiv: GetChildren()) do  
   if b.Name == "Sky" then  
-  b.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  b.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   end  
   end  
   elseif quest == "Boss Bandit" then  
-  game.Workspace["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   elseif quest == "Boss Snow Bandit" then  
-  game.Workspace["NPC DAMAGE"].SnowBoss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].SnowBoss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   elseif quest == "Boss Sand" then  
-  game.Workspace["NPC DAMAGE"].Sand.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Sand.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   elseif quest == "Boss Sky Bandit" then  
-  game.Workspace["NPC DAMAGE"].Enel.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Enel.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   elseif quest == "White Man" then  
-  game.Workspace["NPC DAMAGE"].Killer.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Killer.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.3)  
   elseif quest == "Blue Fire" then  
-  game.Workspace["NPC DAMAGE"].Blue.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Blue.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   elseif quest == "Big Man" then  
-  game.Workspace["NPC DAMAGE"].Big.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Big.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   elseif quest == "Flame User" then  
-  game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)  
+  game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
   end  
   end) 
   end 
