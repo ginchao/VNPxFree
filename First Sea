@@ -4,7 +4,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub, Have Fun:)","Ok")  
   local serv = win:Server("VNP1 X Free", "") 
  local tgls = serv:Channel("Stats, Auto Skill and Load Map") 
- tgls:Toggle("Auto Sword",false, function(z) 
+  tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
  spawn(function() 
  while autostats do wait() 
@@ -14,27 +14,27 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  end) 
  end) 
  tgls:Toggle("Auto Fruit",false, function(z) 
- getgenv().autostats = z 
+ getgenv().autostatsf = z 
  spawn(function() 
- while autostats do wait() 
+ while autostatsf do wait() 
  game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit") 
  wait() 
  end 
  end) 
  end) 
  tgls:Toggle("Auto Health",false, function(z) 
- getgenv().autostats = z 
+ getgenv().autostatsh = z 
  spawn(function() 
- while autostats do wait() 
+ while autostatsh do wait() 
  game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth") 
  wait() 
  end 
  end) 
  end) 
  tgls:Toggle("Auto Melee",false, function(z) 
- getgenv().autostats = z 
+ getgenv().autostatsm = z 
  spawn(function() 
- while autostats==true do wait() 
+ while autostatsm == true do wait() 
  game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Melee") 
  wait() 
  end 
@@ -137,220 +137,280 @@ end
 end)
 end
 end)
-     
  tgls:Button("LoadMap", function() 
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(374.444855, 260.0784, -1132.96313, -0.986770988, -0, -0.162120432, -0, 1, -0, 0.162120432, 0, -0.986770988)*CFrame.new(0, 27, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-972.539612, 171.965164, 375.375153, -0.352832913, -2.21926921e-08, 0.93568635, -3.1479086e-08, 1, 1.18478098e-08, -0.93568635, -2.5274252e-08, -0.352832913)*CFrame.new(0, 27, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0, 17, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-709.053528, 69.7725525, 1733.60962, -0.999881268, 2.6186898e-08, 0.015410413, 2.59717687e-08, 1, -1.41601513e-08, -0.015410413, -1.37582346e-08, -0.999881268)*CFrame.new(0, 27, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4592.96973, 4314.33447, 525.063538, 0.975729644, 0, -0.218978733, -0, 1, -0, 0.218978733, 0, 0.975729644)*CFrame.new(0, 11, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2276.21924, 34.1032829, 1960.59351, 0.615384698, 0, -0.788226962, -0, 1.00000012, -0, 0.788226962, 0, 0.615384698)*CFrame.new(0, 27, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0, 14, 0) 
- wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0) 
+ wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-972.539612, 171.965164, 375.375153, -0.352832913, -2.21926921e-08, 0.93568635, -3.1479086e-08, 1, 1.18478098e-08, -0.93568635, -2.5274252e-08, -0.352832913)*CFrame.new(0, 27, 0) 
+ wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0, 17, 0) 
+ wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-709.053528, 69.7725525, 1733.60962, -0.999881268, 2.6186898e-08, 0.015410413, 2.59717687e-08, 1, -1.41601513e-08, -0.015410413, -1.37582346e-08, -0.999881268)*CFrame.new(0, 27, 0) 
+ wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4592.96973, 4314.33447, 525.063538, 0.975729644, 0, -0.218978733, -0, 1, -0, 0.218978733, 0, 0.975729644)*CFrame.new(0, 11, 0) 
+ wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2276.21924, 34.1032829, 1960.59351, 0.615384698, 0, -0.788226962, -0, 1.00000012, -0, 0.788226962, 0, 0.615384698)*CFrame.new(0, 27, 0) 
+ wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0, 14, 0) 
+ wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0) 
  end) 
- tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
- for _ = 1,3 do 
- getgenv().autoyoruv3 = v 
- if getgenv().autoyoruv3 == true then 
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 17, 0) 
- wait() 
- spawn(function() 
- while autoyoruv3 do wait() 
+
+local tgls = serv:Channel("NPC")
+local bb = nil
+local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1M [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
+bb = y
+end)
+tgls:Toggle("Choose To Auto Buy Bag",false, function(a)
+if bb == nil then
+DiscordLib:Notification("Warning", "Choose To Buy", "Ok")
+else
+getgenv().BuyBag = a
+while BuyBag do task.wait()
+fireclickdetector(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank[bb].ClickDetector)
+end
+end
+end)
+tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
+if  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random") then
+getgenv().autoyoruv3 = v 
+ while autoyoruv3 do wait()
  pcall(function() 
- fireclickdetector(game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"].ClickDetector) wait() 
+ fireclickdetector(game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"].ClickDetector)
  end) 
  end 
- end) 
- end 
- end 
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
  end) 
  tgls:Toggle("Auto Buy Fruit",false, function(v) 
- getgenv().auto = v; 
+if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(" ") then
+ getgenv().auto = v
  spawn(function() 
- while auto do wait() 
+ while auto do task.wait() 
  if not auto then break; end 
- fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait() 
+ fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM)
  end 
- end) 
+ end)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
  end) 
  tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
- getgenv().auto1 = v; 
+if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]:FindFirstChild("Secret Random") then
+ getgenv().auto1 = v
  spawn(function() 
- while auto1 do wait() 
+ while auto1 do task.wait() 
  if not auto1 then break; end 
- fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait() 
+ fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
  end 
  end) 
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
  end) 
-  local drops = serv:Channel("Mob")  
-  local quest = nil  
-  local drop = drops:Dropdown("Mob lv 0 > lv 1000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User"}, function(y)  
-  local plrmainhr = game.Players.LocalPlayer  
-  .Character.HumanoidRootPart  
-  if y == "Bandit" or y == "Boss Bandit" or y == "Snow Bandit" or y == "Boss Snow Bandit" or y == "Boss Sand" or y == "Sky Bandit" or y == "Boss Sky Bandit" or y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User"then  
-  quest = y  
-  if y == "Bandit" or y == "Boss Bandit" then  
-  plrmainhr.CFrame = CFrame.new(606.973083, 44.3946953, -568.288147, -0.646081269, -0, -0.76326859, -0, 1, -0, 0.76326859, 0, -0.646081269)*CFrame.new(0,10,0)  
-  elseif y == "Snow Bandit" or y == "Boss Snow Bandit" then  
-  plrmainhr.CFrame = CFrame.new(-970.516785, 38.5133743, 263.168549, -0.978147209, -0, -0.20791401, -0, 1.00000012, -0, 0.207914039, 0, -0.978147089)*CFrame.new(0,10,0)  
-  elseif y == "Boss Sand" then  
-  plrmainhr.CFrame = CFrame.new(-638.437134, 33.9301033, 1607.00757, -0.987915277, -0, -0.154995069, -0, 1, -0, 0.154995069, 0, -0.987915277)*CFrame.new(0,10,0)  
-  elseif y == "Sky Bandit" or y == "Boss Sky Bandit" then  
-  plrmainhr.CFrame = CFrame.new(-4596.47412, 4331.15967, 150.667847, -0.0648257956, -0, -0.997896552, -0, 1, -0, 0.997896671, 0, -0.0648257881)*CFrame.new(0,30,0)  
-  elseif y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User" then  
-  plrmainhr.CFrame = CFrame.new(-2270.16992, 88.6032257, 2128.39258, -0.0399548337, -0, -0.999201536, -0, 1.00000012, -0, 0.999201536, 0, -0.0399548337)*CFrame.new(0,10,0)  
-  end  
-   end   
-   end)   
-   drops:Toggle("Chose Mob To Auto Quest",false, function(questauto)   
-   if quest == nil then   
-   DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
-   elseif quest ~= nil then   
-   getgenv().autoquest = questauto   
-   spawn(function()   
-   while autoquest do wait()   
-   pcall(function()   
-   if quest == "Bandit" then   
-   game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["STARTER QUEST (BOSS and NPC)"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   elseif quest == "Boss Bandit" and quest ~= nil then   
-   game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["STARTER QUEST (BOSS and NPC)"].Quest.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
-   elseif quest == "Snow Bandit" and quest ~= nil then   
-   game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"]["SNOW QUEST !!!"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   elseif quest == "Boss Snow Bandit" and quest ~= nil then   
-   game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"]["SNOW QUEST !!!"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
-   elseif quest == "Boss Sand" and quest ~= nil then   
-   game:GetService("Workspace")["SAND ISLAND [Lv 100+]"]["SAND MAP"][" "].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   elseif quest == "Sky Bandit" and quest ~= nil then   
-   game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]["SKY QUEST HAHAHAAAAAA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   elseif quest == "Boss Sky Bandit" and quest ~= nil then   
-   game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]["SKY QUEST HAHAHAAAAAA"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
-   elseif quest == "White Man" then   
-   game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["KILLER QUESTTTTTTTTTTTTT"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   elseif quest == "Blue Fire" then   
-   game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["MARINE QUESTTTTT"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   elseif quest == "Big Man" then   
-   game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["MARINE QUESTTTTT"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
-   elseif quest == "Flame User" then   
-   game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["ACE QUEST HIHIHIHI"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
-   end   
-   end)   
-   end   
-   end)   
-   end   
-   end)  
-  drops:Toggle("Auto Bring Mob Choose", false, function(mob)   
-  local plrmain = game.Players.LocalPlayer   
-  local fiv = game:GetService("Workspace")["NPC DAMAGE"]  
-  if quest == nil then   
-  DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")   
-  elseif quest ~= nil then   
-  local v2 = nil 
- getgenv().bringmob = mob 
- if v2 then a:Disconnect() end 
- if bringmob ~= v2 then 
- v2 = game.RunService.RenderStepped:Connect(function() 
- if bringmob == false then v2:Disconnect() end 
-  if quest == "Bandit" then   
-  for i, v in pairs(fiv:GetChildren()) do   
-  if v.Name == "Bandit" then   
-  v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)   
-  end  
-  end  
-  elseif quest == "Snow Bandit" then   
-  for i, e in pairs(fiv:GetChildren()) do  
-  if e.Name == "SnowBandit" then  
-  e.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  end  
-  end  
-  elseif quest == "Sky Bandit" then  
-  for i, b in pairs(fiv: GetChildren()) do  
-  if b.Name == "Sky" then  
-  b.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  end  
-  end  
-  elseif quest == "Boss Bandit" then  
-  game.Workspace["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  elseif quest == "Boss Snow Bandit" then  
-  game.Workspace["NPC DAMAGE"].SnowBoss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  elseif quest == "Boss Sand" then  
-  game.Workspace["NPC DAMAGE"].Sand.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  elseif quest == "Boss Sky Bandit" then  
-  game.Workspace["NPC DAMAGE"].Enel.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  elseif quest == "White Man" then  
-  game.Workspace["NPC DAMAGE"].Killer.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.3)  
-  elseif quest == "Blue Fire" then  
-  game.Workspace["NPC DAMAGE"].Blue.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  elseif quest == "Big Man" then  
-  game.Workspace["NPC DAMAGE"].Big.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  elseif quest == "Flame User" then  
-  game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
-  end  
-  end) 
-  end 
+tgls:Button("Buy God Speed", function(v) 
+if game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]:FindFirstChild(" ")
+then
+ fireclickdetector(game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"][" "].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy Dragon Combat", function(v) 
+if game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"]:FindFirstChild(" ")
+then
+ fireclickdetector(game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"][" "].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy BisentoV1", function(v) 
+if game:GetService("Workspace")["SAND ISLAND [Lv 100+]"]:FindFirstChild("Bisento sell")
+then
+ fireclickdetector(game:GetService("Workspace")["SAND ISLAND [Lv 100+]"]["Bisento sell"].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy YoruV1", function() 
+if game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]:FindFirstChild("Yoru sell")
+then
+ fireclickdetector(game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]["Yoru sell"].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy Hamon", function() 
+if game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]:FindFirstChild(" ")
+then
+ fireclickdetector(game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"][" "].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+
+ local drops = serv:Channel("Mob") 
+ local quest = nil 
+ local drop = drops:Dropdown("Mob lv 0 > lv 1000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User"}, function(y) 
+ local plrmainhr = game.Players.LocalPlayer 
+ .Character.HumanoidRootPart 
+ if y == "Bandit" or y == "Boss Bandit" or y == "Snow Bandit" or y == "Boss Snow Bandit" or y == "Boss Sand" or y == "Sky Bandit" or y == "Boss Sky Bandit" or y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User"then 
+ quest = y 
+ if y == "Bandit" or y == "Boss Bandit" then 
+ plrmainhr.CFrame = CFrame.new(606.973083, 44.3946953, -568.288147, -0.646081269, -0, -0.76326859, -0, 1, -0, 0.76326859, 0, -0.646081269)*CFrame.new(0,10,0) 
+ elseif y == "Snow Bandit" or y == "Boss Snow Bandit" then 
+ plrmainhr.CFrame = CFrame.new(-970.516785, 38.5133743, 263.168549, -0.978147209, -0, -0.20791401, -0, 1.00000012, -0, 0.207914039, 0, -0.978147089)*CFrame.new(0,10,0) 
+ elseif y == "Boss Sand" then 
+ plrmainhr.CFrame = CFrame.new(-638.437134, 33.9301033, 1607.00757, -0.987915277, -0, -0.154995069, -0, 1, -0, 0.154995069, 0, -0.987915277)*CFrame.new(0,10,0) 
+ elseif y == "Sky Bandit" or y == "Boss Sky Bandit" then 
+ plrmainhr.CFrame = CFrame.new(-4596.47412, 4331.15967, 150.667847, -0.0648257956, -0, -0.997896552, -0, 1, -0, 0.997896671, 0, -0.0648257881)*CFrame.new(0,30,0) 
+ elseif y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User" then 
+ plrmainhr.CFrame = CFrame.new(-2270.16992, 88.6032257, 2128.39258, -0.0399548337, -0, -0.999201536, -0, 1.00000012, -0, 0.999201536, 0, -0.0399548337)*CFrame.new(0,10,0) 
+ end 
   end  
   end)  
-  
-  drops:Label("Mob 2")  
-  local drop = drops:Dropdown("Mob lv 1000 > lv 2000", {"MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y)  
-  local plrmainhr = game.Players.LocalPlayer.Character.HumanoidRootPart  
-  if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then  
-  quest = y  
-  if y == "Dark Boss" or y == "God Boss" then  
-  plrmainhr.CFrame = CFrame.new(-3670.16553, 76.162384, 3727.21753, -0.932965517, -6.13140261e-10, 0.359965712, 3.928211e-08, 1, 1.03515397e-07, -0.359965712, 1.10716513e-07, -0.932965517)*CFrame.new(0,10,0)  
-  elseif y == "MMM Boss" then  
-  plrmainhr.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0,10,0)  
-  elseif y == "Red Hair" then  
-  plrmainhr.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0,10,0)  
-  end  
-  end  
-  end)  
-  drops:Toggle("Choose Mob To Auto Quest ",false, function(questauto)  
- if quest == nil then   
-   DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
-   elseif quest ~= nil then   
+  drops:Toggle("Chose Mob To Auto Quest",false, function(questauto)  
+  if quest == nil then  
+  DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")  
+  elseif quest ~= nil then  
   getgenv().autoquest = questauto  
   spawn(function()  
   while autoquest do wait()  
   pcall(function()  
-  if quest == "MMM Boss" then  
-  game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]["MMM QUEST"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
-  elseif quest == "Dark Boss" and quest ~= nil then  
-  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
-  elseif quest == "God Boss" and quest ~= nil then  
-  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()  
-  elseif quest == "Red Hair" then  
-  game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["SECRET MAP"]["RED HAIR QUESTT HAHHA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
-  end 
-  end) 
-  end 
-  end) 
- end 
-  end)  
-  drops:Toggle("Choose Mob To Auto Bring",false, function(mob)  
-  local plrmain = game.Players.LocalPlayer  
- if quest == nil then   
-  DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")   
-  elseif quest ~= nil then   
-   local v2 = nil 
- getgenv().bringmob2 = mob 
- if v2 then a:Disconnect() end 
- if bringmob2 ~= v2 then 
- v2 = game.RunService.RenderStepped:Connect(function() 
- if bringmob2 == false then v2:Disconnect() end 
-  if quest == "Dark Boss"  then  
-  game:GetService("Workspace")["NPC DAMAGE"].Raid.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5)  
-  elseif quest == "MMM Boss" then  
-  game:GetService("Workspace")["NPC DAMAGE"].mmm.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5)  
-  elseif quest == "God Boss" then  
-  game:GetService("Workspace")["NPC DAMAGE"].God.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5)  
-  elseif quest == "Red Hair" then  
-  game:GetService("Workspace")["NPC DAMAGE"].RedH.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5)  
-  end 
-  end) 
-  end 
+  if quest == "Bandit" then  
+  game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["STARTER QUEST (BOSS and NPC)"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+  elseif quest == "Boss Bandit" and quest ~= nil then  
+  game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["STARTER QUEST (BOSS and NPC)"].Quest.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()  
+  elseif quest == "Snow Bandit" and quest ~= nil then  
+  game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"]["SNOW QUEST !!!"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+  elseif quest == "Boss Snow Bandit" and quest ~= nil then  
+  game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"]["SNOW QUEST !!!"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()  
+  elseif quest == "Boss Sand" and quest ~= nil then  
+  game:GetService("Workspace")["SAND ISLAND [Lv 100+]"]["SAND MAP"][" "].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+  elseif quest == "Sky Bandit" and quest ~= nil then  
+  game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]["SKY QUEST HAHAHAAAAAA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+  elseif quest == "Boss Sky Bandit" and quest ~= nil then  
+  game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]["SKY QUEST HAHAHAAAAAA"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()  
+  elseif quest == "White Man" then  
+  game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["KILLER QUESTTTTTTTTTTTTT"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+  elseif quest == "Blue Fire" then  
+  game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["MARINE QUESTTTTT"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+  elseif quest == "Big Man" then  
+  game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["MARINE QUESTTTTT"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()  
+  elseif quest == "Flame User" then  
+  game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["ACE QUEST HIHIHIHI"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
   end  
-  end)
-  local drops = serv:Channel("Weapon")  
+  end)  
+  end  
+  end)  
+  end  
+  end) 
+ drops:Toggle("Auto Bring Mob Choose", false, function(mob)  
+ local plrmain = game.Players.LocalPlayer  
+ local fiv = game:GetService("Workspace")["NPC DAMAGE"] 
+ if quest == nil then  
+ DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")  
+ elseif quest ~= nil then  
+ local v2 = nil
+getgenv().bringmob = mob
+if v2 then a:Disconnect() end
+if bringmob ~= v2 then
+v2 = game.RunService.RenderStepped:Connect(function()
+if bringmob == false then v2:Disconnect() end
+ if quest == "Bandit" then  
+ for i, v in pairs(fiv:GetChildren()) do  
+ if v.Name == "Bandit" then  
+ v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
+ end 
+ end 
+ elseif quest == "Snow Bandit" then  
+ for i, e in pairs(fiv:GetChildren()) do 
+ if e.Name == "SnowBandit" then 
+ e.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ end 
+ end 
+ elseif quest == "Sky Bandit" then 
+ for i, b in pairs(fiv: GetChildren()) do 
+ if b.Name == "Sky" then 
+ b.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.3) 
+ end 
+ end 
+ elseif quest == "Boss Bandit" then 
+ game.Workspace["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.3) 
+ elseif quest == "Boss Snow Bandit" then 
+ game.Workspace["NPC DAMAGE"].SnowBoss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ elseif quest == "Boss Sand" then 
+ game.Workspace["NPC DAMAGE"].Sand.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ elseif quest == "Boss Sky Bandit" then 
+ game.Workspace["NPC DAMAGE"].Enel.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ elseif quest == "White Man" then 
+ game.Workspace["NPC DAMAGE"].Killer.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ elseif quest == "Blue Fire" then 
+ game.Workspace["NPC DAMAGE"].Blue.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ elseif quest == "Big Man" then 
+ game.Workspace["NPC DAMAGE"].Big.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ elseif quest == "Flame User" then 
+ game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
+ end 
+ end)
+ end
+ end 
+ end) 
+
+ drops:Label("Mob 2") 
+ local drop = drops:Dropdown("Mob lv 1000 > lv 2000", {"MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y) 
+ local plrmainhr = game.Players.LocalPlayer.Character.HumanoidRootPart 
+ if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then 
+ quest = y 
+ if y == "Dark Boss" or y == "God Boss" then 
+ plrmainhr.CFrame = CFrame.new(-3670.16553, 76.162384, 3727.21753, -0.932965517, -6.13140261e-10, 0.359965712, 3.928211e-08, 1, 1.03515397e-07, -0.359965712, 1.10716513e-07, -0.932965517)*CFrame.new(0,10,0) 
+ elseif y == "MMM Boss" then 
+ plrmainhr.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0,10,0) 
+ elseif y == "Red Hair" then 
+ plrmainhr.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0,10,0) 
+ end 
+ end 
+ end) 
+ drops:Toggle("Choose Mob To Auto Quest ",false, function(questauto) 
+if quest == nil then  
+  DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")  
+  elseif quest ~= nil then  
+ getgenv().autoquest = questauto 
+ spawn(function() 
+ while autoquest do wait() 
+ pcall(function() 
+ if quest == "MMM Boss" then 
+ game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]["MMM QUEST"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ elseif quest == "Dark Boss" and quest ~= nil then 
+ game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ elseif quest == "God Boss" and quest ~= nil then 
+ game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer() 
+ elseif quest == "Red Hair" then 
+ game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["SECRET MAP"]["RED HAIR QUESTT HAHHA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ end
+ end)
+ end
+ end)
+end
+ end) 
+ drops:Toggle("Choose Mob To Auto Bring",false, function(mob) 
+ local plrmain = game.Players.LocalPlayer 
+if quest == nil then  
+ DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")  
+ elseif quest ~= nil then  
+  local v2 = nil
+getgenv().bringmob2 = mob
+if v2 then a:Disconnect() end
+if bringmob2 ~= v2 then
+v2 = game.RunService.RenderStepped:Connect(function()
+if bringmob2 == false then v2:Disconnect() end
+ if quest == "Dark Boss"  then 
+ game:GetService("Workspace")["NPC DAMAGE"].Raid.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
+ elseif quest == "MMM Boss" then 
+ game:GetService("Workspace")["NPC DAMAGE"].mmm.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
+ elseif quest == "God Boss" then 
+ game:GetService("Workspace")["NPC DAMAGE"].God.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
+ elseif quest == "Red Hair" then 
+ game:GetService("Workspace")["NPC DAMAGE"].RedH.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
+ end
+ end)
+ end
+ end 
+ end)
+  local drops = serv:Channel("Weapon And Fast Attck")  
   local Weaponlist = {}  
   local Weapon = nil  
   for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
@@ -392,21 +452,62 @@ end)
                   end  
           end  
   end)  
-drops:Toggle("Choose Weapon To Fast Actack",false, function(v) 
+ drops:Toggle("Choose Weapon To Fast ActackV1",false, function(v) 
  if Weapon == nil then 
  DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack", "Ok") 
  elseif Weapon ~= nil then 
   getgenv().ie = v  
   spawn(function()  
-  while ie do  wait()
+  while ie == true do  
   pcall(function()  
-   game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)
+  while ie do wait()  game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
+  wait()  
+  end  
   end)  
   end  
   end) 
  end 
   end)  
+  
+drops:Label("Fast ActtackV2 No Choose") 
+ drops:Toggle("Fast ActtackV2 ",false, function(e) 
+ getgenv().auto = e 
+ spawn(function() 
+ while auto do wait() 
+ for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
+ if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
+ v.Hitbox:FireServer(90,90,90) 
+ end 
+ end 
+ end 
+ end) 
+ end) 
 
+  drops:Label("Fast Attack Equip") 
+ drops:Toggle("Fast Acttack ",false, function(e) 
+ getgenv().fasst = e 
+ if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
+ spawn(function() 
+ while fasst do wait() 
+ if not getgenv().fasst then break end 
+ pcall(function() 
+ for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do 
+ if c:IsA("Tool") and c:FindFirstChild("Hitbox") then 
+ c.Parent = game.Players.LocalPlayer.Character 
+ else 
+ for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
+ if v:IsA("Tool") then 
+ v.Hitbox:FireServer(90,90,90) 
+ if fasst == false then game.Players.LocalPlayer.Character.Humanoid:UnequipTools()  
+ end 
+ end 
+ end 
+ end 
+ end 
+ end) 
+ end 
+ end) 
+ end) 
 
  drops:Toggle("Grabtools",false, function(I) 
  getgenv().autograb = I 
@@ -422,6 +523,7 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  end 
  end) 
  end) 
+  
   local drops = serv:Channel("Player")  
   local plrlist = {}  
   local plr = nil  
@@ -550,19 +652,6 @@ if brin == false then v2:Disconnect() end
   end  
   end)  
  local drops = serv:Channel("Player2") 
- drops:Label("Fast Acttack No Equip No Choose, _Fastattack") 
- drops:Toggle("Fast Acttack ",false, function(e) 
- getgenv().auto = e 
- spawn(function() 
- while auto do wait() 
- for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
- if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
- v.Hitbox:FireServer(90,90,90) 
- end 
- end 
- end 
- end) 
- end) 
  local plrlist = {} 
  local plr = nil 
  for i, v in pairs(game:GetService("Players"):GetChildren()) do 
@@ -624,15 +713,10 @@ end
   drops:Button("Hitbox Refresh", function()  
   drop:Change("1")  
   end)  
- drops:Button("Change To 2500", function() 
+ drops:Button("Hitbox Player Choose", function() 
  drop:Change("2500") 
  end) 
-  drops:Button("Change To 500", function() 
- drop:Change("500") 
- end) 
- drops:Button("Change To 100", function() 
- drop:Change("100") 
- end) 
+ 
   drops:Button("Hitbox All Player", function() 
  _G.HeadSize = 2500 
  _G.Disabled = true
