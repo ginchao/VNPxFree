@@ -165,7 +165,7 @@ end)
 
 local tgls = serv:Channel("NPC")
 local bb = nil
-local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1M [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
+local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1m [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
 bb = y
 end)
 tgls:Toggle("Choose To Auto Buy Bag",false, function(a)
