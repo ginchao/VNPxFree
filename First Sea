@@ -164,11 +164,10 @@ fireclickdetector(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank[bb]
 end
 end
 end)
-tgls:Toggle("Auto Drop Item",false,function()
-getgenv().drop = true
+tgls:Toggle("Auto Drop Item",false,function(v)
+getgenv().drop = v
 while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
-wait()
 end
 end)
 tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
@@ -418,7 +417,7 @@ if bringmob2 == false then v2:Disconnect() end
  end
  end 
  end)
-  local drops = serv:Channel("Weapon And Fast Attck")  
+  local drops = serv:Channel("Weapon And Fast Attack")  
   local Weaponlist = {}  
   local Weapon = nil  
   for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
@@ -491,8 +490,8 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end) 
 
-  drops:Label("Fast Attack Equip") 
- drops:Toggle("Fast Acttack ",false, function(e) 
+  drops:Label("Fast AttackV3") 
+ drops:Toggle("Fast ActtackV3 ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
  spawn(function() 
