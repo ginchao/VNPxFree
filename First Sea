@@ -159,8 +159,9 @@ if bb == nil then
 DiscordLib:Notification("Warning", "Choose To Buy Or Load Map", "Ok")
 else
 getgenv().BuyBag = a
-while BuyBag do task.wait()
+while BuyBag do wait()
 fireclickdetector(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank[bb].ClickDetector)
+wait()
 end
 end
 end)
