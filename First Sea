@@ -251,7 +251,7 @@ end
 
  local drops = serv:Channel("Mob") 
  local quest = nil 
- local drop = drops:Dropdown("Mob lv 0 > lv 1000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User"}, function(y) 
+ local drop = drops:Dropdown("Mob lv 0 > lv 1000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User","MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y) 
  local plrmainhr = game.Players.LocalPlayer 
  .Character.HumanoidRootPart 
  if y == "Bandit" or y == "Boss Bandit" or y == "Snow Bandit" or y == "Boss Snow Bandit" or y == "Boss Sand" or y == "Sky Bandit" or y == "Boss Sky Bandit" or y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User"then 
@@ -266,6 +266,14 @@ end
  plrmainhr.CFrame = CFrame.new(-4596.47412, 4331.15967, 150.667847, -0.0648257956, -0, -0.997896552, -0, 1, -0, 0.997896671, 0, -0.0648257881)*CFrame.new(0,30,0) 
  elseif y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User" then 
  plrmainhr.CFrame = CFrame.new(-2270.16992, 88.6032257, 2128.39258, -0.0399548337, -0, -0.999201536, -0, 1.00000012, -0, 0.999201536, 0, -0.0399548337)*CFrame.new(0,10,0) 
+elseif y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then 
+ quest = y 
+ if y == "Dark Boss" or y == "God Boss" then 
+ plrmainhr.CFrame = CFrame.new(-3670.16553, 76.162384, 3727.21753, -0.932965517, -6.13140261e-10, 0.359965712, 3.928211e-08, 1, 1.03515397e-07, -0.359965712, 1.10716513e-07, -0.932965517)*CFrame.new(0,10,0) 
+ elseif y == "MMM Boss" then 
+ plrmainhr.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0,10,0) 
+ elseif y == "Red Hair" then 
+ plrmainhr.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0,10,0) 
  end 
   end  
   end)  
@@ -299,6 +307,14 @@ end
   game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["MARINE QUESTTTTT"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()  
   elseif quest == "Flame User" then  
   game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]["ACE QUEST HIHIHIHI"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()  
+elseif quest == "MMM Boss" then 
+ game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]["MMM QUEST"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ elseif quest == "Dark Boss" and quest ~= nil then 
+ game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ elseif quest == "God Boss" and quest ~= nil then 
+ game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer() 
+ elseif quest == "Red Hair" then 
+ game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["SECRET MAP"]["RED HAIR QUESTT HAHHA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
   end  
   end)  
   end  
@@ -350,61 +366,8 @@ if bringmob == false then v2:Disconnect() end
  elseif quest == "Big Man" then 
  game.Workspace["NPC DAMAGE"].Big.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
  elseif quest == "Flame User" then 
- game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4) 
- end 
- end)
- end
- end 
- end) 
-
- drops:Label("Mob 2") 
- local drop = drops:Dropdown("Mob lv 1000 > lv 2000", {"MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y) 
- local plrmainhr = game.Players.LocalPlayer.Character.HumanoidRootPart 
- if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then 
- quest = y 
- if y == "Dark Boss" or y == "God Boss" then 
- plrmainhr.CFrame = CFrame.new(-3670.16553, 76.162384, 3727.21753, -0.932965517, -6.13140261e-10, 0.359965712, 3.928211e-08, 1, 1.03515397e-07, -0.359965712, 1.10716513e-07, -0.932965517)*CFrame.new(0,10,0) 
- elseif y == "MMM Boss" then 
- plrmainhr.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0,10,0) 
- elseif y == "Red Hair" then 
- plrmainhr.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0,10,0) 
- end 
- end 
- end) 
- drops:Toggle("Choose Mob To Auto Quest ",false, function(questauto) 
-if quest == nil then  
-  DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")  
-  elseif quest ~= nil then  
- getgenv().autoquest = questauto 
- spawn(function() 
- while autoquest do wait() 
- pcall(function() 
- if quest == "MMM Boss" then 
- game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]["MMM QUEST"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
- elseif quest == "Dark Boss" and quest ~= nil then 
- game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
- elseif quest == "God Boss" and quest ~= nil then 
- game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer() 
- elseif quest == "Red Hair" then 
- game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["SECRET MAP"]["RED HAIR QUESTT HAHHA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
- end
- end)
- end
- end)
-end
- end) 
- drops:Toggle("Choose Mob To Auto Bring",false, function(mob) 
- local plrmain = game.Players.LocalPlayer 
-if quest == nil then  
- DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")  
- elseif quest ~= nil then  
-  local v2 = nil
-getgenv().bringmob2 = mob
-if v2 then a:Disconnect() end
-if bringmob2 ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
-if bringmob2 == false then v2:Disconnect() end
- if quest == "Dark Boss"  then 
+ game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)
+elseif quest == "Dark Boss"  then 
  game:GetService("Workspace")["NPC DAMAGE"].Raid.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
  elseif quest == "MMM Boss" then 
  game:GetService("Workspace")["NPC DAMAGE"].mmm.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
@@ -412,11 +375,15 @@ if bringmob2 == false then v2:Disconnect() end
  game:GetService("Workspace")["NPC DAMAGE"].God.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
  elseif quest == "Red Hair" then 
  game:GetService("Workspace")["NPC DAMAGE"].RedH.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
- end
+ end 
  end)
  end
  end 
- end)
+ end) 
+drops:Button("Base Sky", function()   
+  
+    local box = Instance.new("Part") box.Parent = workspace box.Anchored = true box.CanCollide = true box.Name = "Testhub" box.Size = Vector3.new(100000,2,1000000) box.Position = Vector3.new(100,8000,100) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Testhub.CFrame*CFrame.new(0,15,0)
+end)
   local drops = serv:Channel("Weapon And Fast Attack")  
   local Weaponlist = {}  
   local Weapon = nil  
@@ -881,54 +848,6 @@ else
 DiscordLib:Notification("Thông Báo","Tin Nhắn Chưa Được Gửi Hãy Thử Lại...","Ok..")
 end
 end)
-   btns:Button("WallSky", function()   
-  
-    Local = game:GetService('Players').LocalPlayer    
-    Char  = Local.Character    
-    touched,tpdback = false, false    
-    Local.CharacterAdded:connect(function(char)    
-        if script.Disabled ~= true then    
-            wait(.25)    
-            loc = Char.HumanoidRootPart.Position    
-            Char:MoveTo(box.Position + Vector3.new(0,.5,0))    
-        end    
-    end)    
-    game:GetService('UserInputService').InputBegan:connect(function(key)    
-        if key.KeyCode == Enum.KeyCode.Equals then    
-            if script.Disabled ~= true then    
-                script.Disabled = true    
-                print'you may re-execute'    
-            end    
-        end    
-    end)    
-    box = Instance.new('Part',workspace)    
-    box.Anchored = true    
-    box.CanCollide = true    
-    box.Size = Vector3.new(100000,2,100000)    
-    box.Position = Vector3.new(100,8000,100)    
-    box.Touched:connect(function(part)    
-        if (part.Parent.Name == Local.Name) then    
-            if touched == false then    
-                touched = true    
-                function apply()    
-                    if script.Disabled ~= true then    
-                        no = Char.HumanoidRootPart:Clone()    
-                        wait(.25)    
-                        Char.HumanoidRootPart:Destroy()    
-                        no.Parent = Char    
-                        Char:MoveTo(loc)    
-                        touched = false    
-                    end end    
-                if Char then    
-                    apply()    
-                end    
-            end    
-        end    
-    end)    
-    repeat wait() until Char    
-    loc = Char.HumanoidRootPart.Position    
-    Char:MoveTo(box.Position + Vector3.new(0,.5,0))    
-    end)    
     btns:Button("Fast Mode", function()    
     local ToDisable = {    
             Textures = true,    
