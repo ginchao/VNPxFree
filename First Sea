@@ -476,7 +476,7 @@ if bringmob2 == false then v2:Disconnect() end
  end 
   end)  
   
-drops:Label("Fast ActtackV2 No Choose---------------------") 
+drops:Label("---------------------Fast ActtackV2 No Choose---------------------") 
  drops:Toggle("Fast ActtackV2 ",false, function(e) 
  getgenv().auto = e 
  spawn(function() 
@@ -490,7 +490,7 @@ drops:Label("Fast ActtackV2 No Choose---------------------")
  end) 
  end) 
 
-  drops:Label("Fast AttackV3---------------------") 
+  drops:Label("---------------------Fast AttackV3---------------------") 
  drops:Toggle("Fast ActtackV3 ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
