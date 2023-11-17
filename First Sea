@@ -765,7 +765,7 @@ if v:IsA("Humanoid") then
 if v.WalkSpeed == 30 or v.WalkSpeed == 150 or v.WalkSpeed == 70 or v.WalkSpeed == 1000 then
 DiscordLib: Notification("Warning","Please Clear Speed","Ok")
 else
-    sldr:Change("501")    
+    sldr:Change("500")    
 end
 end
 end
@@ -776,7 +776,7 @@ if v:IsA("Humanoid") then
 if v.WalkSpeed == 30 or v.WalkSpeed == 70 or v.WalkSpeed == 500 or v.WalkSpeed == 1000 then
 DiscordLib: Notification("Warning","Please Clear Speed","Ok")
 else
-    sldr:Change("151")    
+    sldr:Change("150")    
 end
 end
 end
