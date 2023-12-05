@@ -165,12 +165,12 @@ wait()
 end
 end
 end)
-tgls:Toggle("Auto Drop Item",false,function(v)
+--tgls:Toggle("Auto Drop Item",false,function(v)
 getgenv().drop = v
 while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
 end
-end)
+end)--
 tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
 if  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random") then
 getgenv().autoyoruv3 = v 
