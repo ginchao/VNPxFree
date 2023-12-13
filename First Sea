@@ -9,8 +9,9 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  getgenv().autostats = z 
  spawn(function() 
  while autostats do wait() 
- game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Sword") 
+for i = 1,50000 do game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Sword") 
  wait() 
+end
  end 
  end) 
  end) 
@@ -18,8 +19,9 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  getgenv().autostatsf = z 
  spawn(function() 
  while autostatsf do wait() 
- game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit") 
+for i = 1,50000 do game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit") 
  wait() 
+end
  end 
  end) 
  end) 
@@ -27,8 +29,9 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  getgenv().autostatsh = z 
  spawn(function() 
  while autostatsh do wait() 
- game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth") 
+for i = 1,50000 do game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth") 
  wait() 
+end
  end 
  end) 
  end) 
@@ -36,8 +39,9 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  getgenv().autostatsm = z 
  spawn(function() 
  while autostatsm == true do wait() 
- game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Melee") 
+for i = 1,50000 do game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Melee") 
  wait() 
+end
  end 
  end) 
  end)
