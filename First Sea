@@ -256,23 +256,6 @@ end
  .Character.HumanoidRootPart 
  if y == "Bandit" or y == "Boss Bandit" or y == "Snow Bandit" or y == "Boss Snow Bandit" or y == "Boss Sand" or y == "Sky Bandit" or y == "Boss Sky Bandit" or y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User" or y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then 
  quest = y 
- if y == "Bandit" or y == "Boss Bandit" then 
- plrmainhr.CFrame = CFrame.new(606.973083, 44.3946953, -568.288147, -0.646081269, -0, -0.76326859, -0, 1, -0, 0.76326859, 0, -0.646081269)*CFrame.new(0,10,0) 
- elseif y == "Snow Bandit" or y == "Boss Snow Bandit" then 
- plrmainhr.CFrame = CFrame.new(-970.516785, 38.5133743, 263.168549, -0.978147209, -0, -0.20791401, -0, 1.00000012, -0, 0.207914039, 0, -0.978147089)*CFrame.new(0,10,0) 
- elseif y == "Boss Sand" then 
- plrmainhr.CFrame = CFrame.new(-638.437134, 33.9301033, 1607.00757, -0.987915277, -0, -0.154995069, -0, 1, -0, 0.154995069, 0, -0.987915277)*CFrame.new(0,10,0) 
- elseif y == "Sky Bandit" or y == "Boss Sky Bandit" then 
- plrmainhr.CFrame = CFrame.new(-4596.47412, 4331.15967, 150.667847, -0.0648257956, -0, -0.997896552, -0, 1, -0, 0.997896671, 0, -0.0648257881)*CFrame.new(0,30,0) 
- elseif y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User" then 
- plrmainhr.CFrame = CFrame.new(-2270.16992, 88.6032257, 2128.39258, -0.0399548337, -0, -0.999201536, -0, 1.00000012, -0, 0.999201536, 0, -0.0399548337)*CFrame.new(0,10,0) 
-elseif y == "Dark Boss" or y == "God Boss" then 
- plrmainhr.CFrame = CFrame.new(-3670.16553, 76.162384, 3727.21753, -0.932965517, -6.13140261e-10, 0.359965712, 3.928211e-08, 1, 1.03515397e-07, -0.359965712, 1.10716513e-07, -0.932965517)*CFrame.new(0,10,0) 
- elseif y == "MMM Boss" then 
- plrmainhr.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0,10,0) 
- elseif y == "Red Hair" then 
- plrmainhr.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0,10,0) 
- end 
   end  
   end)  
   drops:Toggle("Chose Mob To Auto Quest",false, function(questauto)  
@@ -591,7 +574,7 @@ drops:Label("---------------------Fast ActtackV2 No Choose---------------------"
   end  
   end  
   end)  
-  drops:Button("Teleport To Player, Need LoadMap", function()  
+  drops:Button("Teleport To Player", function()  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok") 
  elseif plr ~= nil then 
@@ -600,7 +583,7 @@ drops:Label("---------------------Fast ActtackV2 No Choose---------------------"
   end)  
   drops:Button("Choose Player To Super Ultra Skill, Need Loadmap", function()  
  if plr == nil then 
- DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill, Need Loadmap", "Ok") 
+ DiscordLib:Notification("Warning", " Super Ultra Skill Target", "Ok") 
  elseif plr ~= nil then 
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame  
   wait(0.1)  
@@ -627,7 +610,7 @@ drops:Label("---------------------Fast ActtackV2 No Choose---------------------"
  end 
  end) 
   
-  drops:Toggle("Auto Teleport Player, Need LoadMap",false, function(t)  
+  drops:Toggle("Auto Teleport Player",false, function(t)  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Auto Teleport Player", "Ok") 
  elseif plr ~= nil then 
@@ -641,7 +624,7 @@ if autele == false then v2:Disconnect() end game.Players.LocalPlayer.Character.H
   end  
   end
   end)  
-  drops:Toggle("Auto Bring Player, Need LoadMap",false, function(a)  
+  drops:Toggle("Auto Bring Player",false, function(a)  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Bring Player", "Ok") 
  elseif plr ~= nil then 
@@ -655,7 +638,7 @@ if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRoo
  end 
  end 
   end)  
-  drops:Toggle("Auto Tween Bring Player, Need LoadMap",false, function(p)  
+  drops:Toggle("Auto Tween Bring Player",false, function(p)  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Tween Bring Player", "Ok") 
  elseif plr ~= nil then 
@@ -673,7 +656,7 @@ if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRoo
   end)  
  end 
   end)  
-  drops:Toggle("Auto Bring All Player, Need LoadMap",false, function(t)  
+  drops:Toggle("Auto Bring All Player",false, function(t)  
   local v2 = nil
 getgenv().brin = t
 if v2 then a:Disconnect() end
