@@ -4,7 +4,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
   local per = game.Players.LocalPlayer.Name
  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub, Have Fun:)","Ok")  
   local serv = win:Server("VNP1 X Free", "") 
- local tgls = serv:Channel("Stats, Auto Skill and Load Map") 
+ local tgls = serv:Channel("Stats, Auto Skill+Load Map") 
   tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
  spawn(function() 
@@ -153,7 +153,7 @@ end)
  wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0) 
  end) 
 
-local tgls = serv:Channel("NPC")
+local tgls = serv:Channel("SHOP")
 local bb = nil
 local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1m [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
 bb = y
@@ -249,7 +249,7 @@ DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
 
- local drops = serv:Channel("Farm And LocalPlayer") 
+ local drops = serv:Channel("Farm+LocalPlayer") 
  local quest = nil 
  local drop = drops:Dropdown("Mob lv 0 > lv 3000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User","MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y) 
  local plrmainhr = game.Players.LocalPlayer 
@@ -451,7 +451,7 @@ drops:Toggle("Grabtools",false, function(I)
  end 
  end) 
  end) 
-  local drops = serv:Channel("Weapon And Fast Attack")  
+  local drops = serv:Channel("Weapon+Fast Attack")  
 
  
   local Weaponlist = {}  
@@ -495,24 +495,6 @@ drops:Toggle("Grabtools",false, function(I)
                   end  
           end  
   end)  
- drops:Toggle("Choose Weapon To Fast ActackV1",false, function(v) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack", "Ok") 
- elseif Weapon ~= nil then 
-  getgenv().ie = v  
-  spawn(function()  
-  while ie == true do  
-  pcall(function()  
-  while ie do wait()  game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end  
-  end)  
-  end  
-  end) 
- end 
-  end)  
-  
-drops:Label("---------------------Fast ActtackV2 No Choose---------------------") 
  drops:Toggle("Fast ActtackV2 ",false, function(e) 
  getgenv().auto = e 
  spawn(function() 
@@ -711,7 +693,7 @@ if brin == false then v2:Disconnect() end
   end  
   end  
   end)  
- local drops = serv:Channel("Player2") 
+ local drops = serv:Channel("Hitbox | Beta") 
  local plrlist = {} 
  local plr = nil 
  for i, v in pairs(game:GetService("Players"):GetChildren()) do 
