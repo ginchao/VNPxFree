@@ -1129,7 +1129,7 @@ end)
    end)    
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
-local serv = win:Server(New", "rbxassetid://15895254052")
+local serv = win:Server("New", "rbxassetid://15895254052")
 local count = 0
 local drops = serv:Channel("Event 🌟 0,000000")
 drops:Button("CopyLinkFb Người Phát Quà",function()
