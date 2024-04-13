@@ -1,4 +1,4 @@
-local Notif = loadstring(game:HttpGet("https://api-sirclub.onrender.com/scripts/raw/notifybottom.lua"))()
+
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("Test Hub X Free No Premium")  
   local per = game.Players.LocalPlayer.Name
